@@ -1,26 +1,26 @@
-﻿
 
 
-//Spiel wo ein User eine Zahl eingibt, um die Manticore(Feind) Distanz zu bestimmen. Und dann versucht der zweite User dem Manticore Schaden zuzufuegen. Aufgabe von dem Buch "The C# Player's Guide" Seite 125.
-int manticoreHealth = 10;
+
+//Rpg ähnlichees zugbasiertes "Spiel" wo OOP und Logik benutzt werden. Aufgabe von dem Buch "The C# Player's Guide" Seite 125.
+int enemyHealth = 10;
 int cityHealth = 15;
 int numberOfRounds = 0;
 
 int manticoreDistance = askPlayer();
 
 
-while (cityHealth > 0 && manticoreHealth > 0)
+while (cityHealth > 0 && enemyHealth > 0)
 
 
 {
 
 
         numberOfRounds += 1;
-        Console.WriteLine($"The round number is {numberOfRounds} the health of the city is {cityHealth} and the health of the Manticore is {manticoreHealth}");
+        Console.WriteLine($"The round number is {numberOfRounds} the health of the city is {cityHealth} and the health of the Manticore is {enemyHealth}");
         int playerGuess = askPlayer();
         if (playerGuess == manticoreDistance)
         {
-            manticoreHealth -= CannonDamage();
+            enemyHealth -= CannonDamage();
             Console.WriteLine("You hit the target");
             
 
@@ -41,9 +41,9 @@ while (cityHealth > 0 && manticoreHealth > 0)
             Console.WriteLine("You're dead");
             break;
           }
-        else if(manticoreHealth < 0)
+        else if(enemyHealth < 0)
         {
-        Console.WriteLine("You killed the manticore");
+        Console.WriteLine("You won the game");
         }
         
 
