@@ -1,7 +1,7 @@
 
 
 
-//Rpg ähnlichees zugbasiertes "Spiel" wo OOP und Logik benutzt werden. Aufgabe von dem Buch "The C# Player's Guide" Seite 125.
+//Rpg ähnlichees zugbasiertes "Spiel" wo OOP und Logik benutzt werden. Aufgabe aus dem Buch "The C# Player's Guide" Seite 125.
 int enemyHealth = 10;
 int cityHealth = 15;
 int numberOfRounds = 0;
